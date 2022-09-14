@@ -40,7 +40,6 @@ def change_to_base(n: int, b: int) -> str:
     if tegn < 0:                # if the number was negative 
         liste.append('-')       # we append a minus sign
     assert 2 <= b <= 16
-    print(liste)
     for i in range(0,2,1):
         if int(liste[i]) > 10:
             liste[i]=(digits[int(liste[i])])
