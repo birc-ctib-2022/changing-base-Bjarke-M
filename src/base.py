@@ -35,12 +35,8 @@ def change_to_base(n: int, b: int) -> str:
     n *= tegn         # because flooring work by rounding to the lowest number we have a problem when negative, i've tried to remove that by making n positive for now
     liste = []         #a list for our results
     while n:
-        liste.append(str(n%b)) #making n in our base
+        liste.append(digits[n%b]) #making n in our base
         n = int(n//b)          # moduloing around (n will be true while not 0)
     if tegn < 0:                # if the number was negative 
         liste.append('-')       # we append a minus sign
-    assert 2 <= b <= 16
-    for i in range(0,2,1):
-        if int(liste[i]) > 10:
-            liste[i]=(digits[int(liste[i])])
     return ''.join(liste[::-1])  # to get the minus sign in the right place 
